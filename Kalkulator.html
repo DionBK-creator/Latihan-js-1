@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Kalkulator Sederhana</title>
+</head>
+<body>
+    <h2>Kalkulator JavaScript Sederhana</h2>
+    <p>Silakan cek <i>pop-up</i> pada layar browser Anda untuk melakukan perhitungan.</p>
+    <p>Refresh (F5) halaman ini jika ingin menghitung ulang.</p>
+
+    <script>
+
+        let input1 = prompt("Masukkan angka 1:");
+        let input2 = prompt("Masukkan angka 2:");
+        let operator = prompt("Masukkan operator (+, -, *, /):");
+        
+        let angka1 = parseFloat(input1);
+        let angka2 = parseFloat(input2);
+        let hasil;
+
+        if (isNaN(angka1) || isNaN(angka2)) {
+            hasil = "Error: Input yang Anda masukkan bukan angka!";
+        } else {
+            
+            if (operator === "+") {
+                hasil = angka1 + angka2;
+            } else if (operator === "-") {
+                hasil = angka1 - angka2;
+            } else if (operator === "*") {
+                hasil = angka1 * angka2;
+            } else if (operator === "/") {
+                hasil = angka1 / angka2;
+            } else {
+                hasil = "Error: Operator tidak valid!";
+            }
+        }
+
+        alert("Hasil: " + hasil);
+    </script>
+</body>
+</html>
